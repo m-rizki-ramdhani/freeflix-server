@@ -8,7 +8,9 @@ import (
 )
 
 type Config struct {
-	APP_NAME string
+	APP_NAME  string
+	GRPC_PORT string
+	REST_PORT string
 }
 
 func LoadConfig() Config {
@@ -18,7 +20,9 @@ func LoadConfig() Config {
 	}
 
 	return Config{
-		APP_NAME: getEnv("APP_NAME", "APP_NAME"),
+		APP_NAME:  getEnv("APP_NAME", "APP_NAME"),
+		GRPC_PORT: getEnv("GRPC_PORT", ":5001"),
+		REST_PORT: getEnv("REST_PORT", ":5000"),
 	}
 }
 
