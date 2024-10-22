@@ -1,0 +1,12 @@
+swagger: '2.0'
+info:
+  description: 'API Freeflix'
+  version: 1.0.0
+  title: 'Freeflix API'
+paths:
+  /healt-check:
+    get:
+      summary: Check Healt API
+      response:
+        '200':
+          description: API Running
